@@ -19,11 +19,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hack or Snooze</title>
-  <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-      crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+    integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/user.css">
   <link rel="stylesheet" href="css/stories.css">
@@ -39,6 +39,9 @@
   </div>
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
+    <a class="nav-link hidden" href="#" id="nav-submit">submit</a>
+    <a class="nav-link hidden" href="#" id="nav-favorites">favorites</a>
+    <a class="nav-link hidden" href="#" id="nav-own">my stories</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
   </div>
@@ -52,6 +55,12 @@
 
   <!-- List of all stories -->
   <ol id="all-stories-list" class="stories-list"></ol>
+
+  <!-- favorite stories list -->
+  <ol id="fav-stories-list" class="stories-list"></ol>
+
+  <!-- user stories list -->
+  <ol id="own-stories-list" class="stories-list"></ol>
 
 </section>
 
@@ -93,6 +102,25 @@
       <input id="signup-password" autocomplete="new-password" type="password">
     </div>
     <button type="submit">create account</button>
+  </form>
+
+  <!-- Submit form -->
+  <form action="#" id="submit-form" class="submit-form hidden" method="post">
+    <h4>Submit</h4>
+    <div class="submit-input">
+      <label for="submit-title">title</label>
+      <input id="submit-title" required>
+    </div>
+    <div class="submit-input">
+      <label for="submit-author">author</label>
+      <input id="submit-author" required>
+    </div>
+    <div class="submit-input">
+      <label for="submit-url">url</label>
+      <input id="submit-url" type="url" required>
+    </div>
+    <button type="submit">submit</button>
+    <hr>
   </form>
 </section>
 

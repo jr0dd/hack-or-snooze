@@ -37,3 +37,48 @@
 .story-user {
   display: block;
 }
+
+/* favorite button */
+.fav-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: 5px 10px;
+}
+
+.fav-button::before {
+  color: #5d5c5c;
+  content: '☆';
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.fav-button::after {
+  color: #2a91d1;
+  content: '★';
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s;
+}
+
+.favorite::after {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* delete button */
+
+.delete-button {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  left: 2%;
+}
+
+.fa-trash {
+  color:#3b3a3a;
+}
+
+.fa-trash:hover {
+  color: #b93434;
+}
